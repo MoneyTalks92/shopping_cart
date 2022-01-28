@@ -21,3 +21,26 @@ on windows:
 3. install the dependencies:
 
 `pip install -r requirements.txt`
+
+4. run the app:
+
+`python manage.py runserver`
+
+
+REST API
+
+GET Request
+
+Response
+
+POST Request
+
+Response
+
+PATCH Request
+
+Response
+
+DELETE Request
+
+Response

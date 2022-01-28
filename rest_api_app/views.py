@@ -32,7 +32,6 @@ class ShoppingCart(View):
         return JsonResponse(data, status=201)
 
     def get(self, request):
-        items_count = Cart.objects.count()
         items = Cart.objects.all()
 
         items_data = []
@@ -45,7 +44,6 @@ class ShoppingCart(View):
 
         data = {
             'items': items_data,
-            'count': items_count,
         }
 
         return JsonResponse(data)
@@ -63,6 +61,10 @@ class ShoppingCartUpdate(View):
         data = {'message': f'Item {item_id} has been updated'}
 
         return JsonResponse(data)
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class ShoppingCartDelete(View):
 
     def delete(self, request, item_id):
         item = Cart.objects.get(id=item_id)
