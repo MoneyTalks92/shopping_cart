@@ -29,18 +29,41 @@ on windows:
 
 REST API
 
-GET Request
-
-Response
-
 POST Request
 
+http://127.0.0.1:8000/cart-items/
+
 Response
+
+"message": "New item has been added to the Cart with id: 1"
+
+GET Request
+
+http://127.0.0.1:8000/cart-items/
+
+Response
+
+
+"items": 
+
+        "product_name": 
+        "product_price": 
+        "product_quantity": 
+
+
 
 PATCH Request
 
+http://127.0.0.1:8000/update-item/1
+
 Response
+
+"message": "Item 1 has been updated"
 
 DELETE Request
 
+http://127.0.0.1:8000/delete-item/1
+
 Response
+
+"message": "Item 1 has been deleted"
